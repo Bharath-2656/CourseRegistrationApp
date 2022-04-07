@@ -24,6 +24,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
 
 	@Autowired
 	private JwtRequestFilter jwtRequestFilter;
+	
+	@Autowired
+	public JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
 
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception
@@ -49,7 +52,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
 	{
 
 		httpSecurity.csrf().disable().authorizeRequests().antMatchers("/authenticate", "/register", "/login", "/home")
-		.permitAll().anyRequest().authenticated().and().sessionManagement()
+		.permitAll().anyRequest().authenticated().and().exceptionHandling()
+		.authenticationEntryPoint(jwtAuthenticationEntryPoint).and().sessionManagement()
 		.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
 		httpSecurity.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
