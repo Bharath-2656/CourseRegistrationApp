@@ -28,7 +28,7 @@ button {
 			<option value="Cloud Technology">Cloud Technology</option>
 			<option value="Basic Programming">Basic Programming</option>
 		</select>
-		<br><br><button onClick="JavaScript:window.location='homepage.jsp';">Back
+		<br><br><button onClick="JavaScript:window.location='home';">Back
 			to Home Page</button>
 	</div>
 </body>

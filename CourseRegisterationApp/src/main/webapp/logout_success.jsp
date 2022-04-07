@@ -4,8 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Logged in</title>
-</head>
+<title>Course Registration Home Page</title>
 <style type="text/css">
 label {
 	display: inline-block;
@@ -13,16 +12,17 @@ label {
 	margin: 5px;
 	text-align: left;
 }
+
 button {
 	padding: 10px;
 	margin: 10px;
 }
 </style>
+</head>
 <body>
 	<div align="center">
-		<h1>Login Success</h1>
-		<br><span>Email-ID:</span><span>${user.email}</span><br>
-		<br><button onClick="JavaScript:window.location='area_of_intrest';">Choose Area of Interest</button>
+		<h1>Logged Out Successfully</h1>
+		<button>Logout</button>
 	</div>
 </body>
 </html>

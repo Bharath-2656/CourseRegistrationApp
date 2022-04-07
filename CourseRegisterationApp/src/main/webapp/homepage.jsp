@@ -23,8 +23,8 @@ button {
 	<div align="center">
 		<h1>Welcome Student</h1>
 		<h2>Register or Login</h2>
-		<br><button onClick="JavaScript:window.location='register.jsp';">Register</button>
-		<button onClick="JavaScript:window.location='login.jsp';">Login</button>
+		<br><button onClick="JavaScript:window.location='register';">Register</button>
+		<button onClick="JavaScript:window.location='authenticate';">Login</button>
 	</div>
 </body>
 </html>

@@ -5,10 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.*;
+
 
 @Entity
-public class User
+public class UserModel
 {
 
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,23 +25,16 @@ public class User
 	private String password;
 	@Column(name = "confirm_password", nullable = false)
 	private String confirm_password;
+	@Column(name = "role")
+	private String role;
 
-	public String getConfirm_password()
-	{
-		return confirm_password;
-	}
-
-	public void setConfirm_password(String confirm_password)
-	{
-		this.confirm_password = confirm_password;
-	}
-
-	public User()
+	// default constructor
+	public UserModel()
 	{
 
 	}
 
-	public User(Integer id, String name, Integer age, String email, String password, String confirm_password)
+	public UserModel(Integer id, String name, Integer age, String email, String password, String confirm_password)
 	{
 		super();
 		this.id = id;
@@ -100,6 +93,26 @@ public class User
 	public void setPassword(String password)
 	{
 		this.password = password;
+	}
+
+	public String getConfirm_password()
+	{
+		return confirm_password;
+	}
+
+	public void setConfirm_password(String confirm_password)
+	{
+		this.confirm_password = confirm_password;
+	}
+
+	public String getRole()
+	{
+		return role;
+	}
+
+	public void setRole(String role)
+	{
+		this.role = role;
 	}
 
 	@Override

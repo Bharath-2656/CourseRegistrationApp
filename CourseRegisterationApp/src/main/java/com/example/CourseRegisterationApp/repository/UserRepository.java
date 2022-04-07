@@ -1,9 +1,11 @@
 package com.example.CourseRegisterationApp.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.example.CourseRegisterationApp.UserModel.User;
+import org.springframework.stereotype.Repository;
 
-public interface UserRepository extends JpaRepository<User, Integer>
+import com.example.CourseRegisterationApp.UserModel.UserModel;
+@Repository
+public interface UserRepository extends JpaRepository<UserModel, Integer>
 {
-	User findByEmail(String chars);
+	UserModel findByEmail(String chars);
 }
